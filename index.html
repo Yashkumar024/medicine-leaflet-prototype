@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Medicine Leaflet Service · Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="demo-strip" role="note">
+    <strong>Prototype with fictional demo data.</strong>
+    All medicines and leaflet texts are invented for this demo. Not medical information.
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#/" aria-label="Medicine Leaflet Service, home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="3" width="22" height="26" rx="3" fill="currentColor"/><rect x="10" y="9" width="12" height="2.4" rx="1.2" fill="var(--bg)"/><rect x="10" y="14" width="12" height="2.4" rx="1.2" fill="var(--bg)"/><rect x="10" y="19" width="8" height="2.4" rx="1.2" fill="var(--bg)"/></svg>
+        <span><span class="brand-name">Leaflet Service</span><span class="brand-tag">Official medicine leaflets</span></span>
+      </a>
+      <button type="button" class="btn btn-ghost reading-btn" id="readingBtn" aria-haspopup="dialog" aria-controls="readingDialog">
+        <span aria-hidden="true" class="aa">Aa</span> <span class="reading-label">Text &amp; contrast</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="wrap" tabindex="-1"></main>
+
+  <div id="speechBar" class="speech-bar" hidden role="region" aria-label="Read aloud controls"></div>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>This service shows official medicine leaflets. It does not give medical advice. For questions about your medicine, <a href="#/help">ask a pharmacist</a>.</p>
+      <nav aria-label="Footer">
+        <a href="#/help">Ask a pharmacist</a>
+        <a href="#/about">Content &amp; privacy rules</a>
+        <a href="#/demo">Demo guide</a>
+      </nav>
+    </div>
+  </footer>
+
+  <dialog id="readingDialog" class="reading-dialog" aria-labelledby="readingTitle">
+    <form method="dialog" class="reading-form" id="readingForm">
+      <div class="dialog-head">
+        <h2 id="readingTitle">Text &amp; contrast</h2>
+        <button class="btn btn-ghost icon-btn" value="close" aria-label="Close">✕</button>
+      </div>
+      <p class="muted small">Changes how text looks only. The leaflet wording stays exactly the same. Saved on this device only.</p>
+
+      <fieldset>
+        <legend>Text size</legend>
+        <div class="seg" role="radiogroup">
+          <label><input type="radio" name="size" value="1"><span style="font-size:1rem">A</span><span class="sr-only">Standard</span></label>
+          <label><input type="radio" name="size" value="1.25"><span style="font-size:1.2rem">A</span><span class="sr-only">Large</span></label>
+          <label><input type="radio" name="size" value="1.5"><span style="font-size:1.4rem">A</span><span class="sr-only">Larger</span></label>
+          <label><input type="radio" name="size" value="2"><span style="font-size:1.65rem">A</span><span class="sr-only">Largest</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contrast</legend>
+        <div class="seg seg-text">
+          <label><input type="radio" name="contrast" value="standard"><span>Standard</span></label>
+          <label><input type="radio" name="contrast" value="high"><span>High</span></label>
+          <label><input type="radio" name="contrast" value="dark"><span>High, dark</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Line spacing</legend>
+        <div class="seg seg-text">
+          <label><input type="radio" name="spacing" value="normal"><span>Normal</span></label>
+          <label><input type="radio" name="spacing" value="wide"><span>Wide</span></label>
+        </div>
+      </fieldset>
+
+      <div class="reading-preview" aria-hidden="true">Preview: Always take this medicine exactly as described in this leaflet.</div>
+
+      <div class="dialog-actions">
+        <button type="button" class="btn btn-secondary" id="readingReset">Reset</button>
+        <button class="btn btn-primary" value="close">Done</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="announcer" class="sr-only" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
