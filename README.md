@@ -4,6 +4,8 @@ A responsive website prototype that helps patients and caregivers find the **cor
 
 > **All medicines, codes (PZN), companies and leaflet texts are fictional demo content** written for this prototype. They are not real medical information.
 
+**Live demo:** https://yashkumar024.github.io/medicine-leaflet-prototype/ (GitHub Pages, deployed from `main`)
+
 ## Run it
 
 Plain HTML/CSS/JavaScript. No build step and no dependencies (the same stack as the sibling `srh-wayfinding-prototype`).
