@@ -8,7 +8,7 @@ A responsive website prototype that helps patients and caregivers find the **cor
 
 ## Run it
 
-Plain HTML/CSS/JavaScript. No build step and no dependencies (the same stack as the sibling `srh-wayfinding-prototype`).
+Plain HTML/CSS/JavaScript. No build step and no dependencies.
 
 ```bash
 cd medicine-leaflet-prototype
@@ -19,8 +19,6 @@ python3 -m http.server 4322 --bind 127.0.0.1
 ```
 
 Then open **http://localhost:4322**. Any static server works. Opening `index.html` directly from disk also works in most browsers.
-
-In Claude Code, `.claude/launch.json` (in the parent folder) has a `leaflet-prototype` configuration for the same server.
 
 ## Working case flows
 
